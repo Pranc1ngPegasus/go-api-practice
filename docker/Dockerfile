@@ -1,7 +1,7 @@
 FROM golang:1.15-alpine
 
 WORKDIR /app
-ARG PORT
+ARG APP_PORT
 ENV GO111MODULE=on
 
 RUN apk update \
@@ -12,4 +12,4 @@ RUN apk update \
 
 COPY . .
 
-EXPOSE $PORT
+EXPOSE $APP_PORT

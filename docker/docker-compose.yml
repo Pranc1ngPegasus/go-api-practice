@@ -5,7 +5,7 @@ services:
       context: ../
       dockerfile: "docker/Dockerfile"
       args:
-        PORT: ${PORT}
+        APP_PORT: ${APP_PORT}
     command: >
       sh -c "
       envsubst < ./dbconfig.yml.tpl > ./dbconfig.yml &&
@@ -14,17 +14,17 @@ services:
     container_name: go-api-practice-app
     environment:
       ENV: ${ENV}
-      PORT: ${PORT}
+      APP_PORT: ${PORT}
       DB_NAME: ${MYSQL_DATABASE}_${ENV}
       DB_USER: ${MYSQL_USER}
       DB_PASS: ${MYSQL_PASSWORD}
       DB_HOST: ${MYSQL_HOST}
     expose:
-      - ${PORT}
+      - ${APP_PORT}
     links:
       - db
     ports:
-      - ${PORT}:${PORT}
+      - ${APP_PORT}:${APP_PORT}
     volumes:
       - ../:/app/
   db:
