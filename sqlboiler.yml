@@ -1,0 +1,15 @@
+pkgname: model
+output: internal/adapter/infrastructure/model
+add-global-variants: 'true'
+add-panic-variants: 'true'
+mysql:
+  dbname: practice
+  host: go-api-practice-db
+  port: 3306
+  user: pranc1ngpegasus
+  pass: lqsym
+  sslmode: 'false'
+  skipSQLCmd: 'false'
+  testdbname: practice_test
+  blacklist:
+    - gorp_migrations

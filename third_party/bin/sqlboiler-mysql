@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+go run github.com/volatiletech/sqlboiler/drivers/sqlboiler-mysql "$@"
