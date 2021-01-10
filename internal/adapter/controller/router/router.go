@@ -18,6 +18,7 @@ func NewRouter() http.Handler {
 	router.Use(middleware.Timeout(60 * time.Second))
 
 	router.Mount("/healthcheck", NewHealthcheck())
+	router.Mount("/users", NewUser())
 
 	return router
 }
