@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"net/http"
+	"os"
 
 	"github.com/Pranc1ngPegasus/go-api-practice/internal/adapter/configuration"
 	log "github.com/sirupsen/logrus"
