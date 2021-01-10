@@ -9,14 +9,16 @@ import (
 	"github.com/Pranc1ngPegasus/go-api-practice/internal/adapter/configuration"
 	"github.com/Pranc1ngPegasus/go-api-practice/internal/adapter/controller/router"
 	"github.com/Pranc1ngPegasus/go-api-practice/internal/adapter/controller/server"
+	"github.com/Pranc1ngPegasus/go-api-practice/internal/adapter/infrastructure"
 	"net/http"
 )
 
 // Injectors from injector.go:
 
 func initialize() *http.Server {
-	handler := router.NewRouter()
 	config := configuration.Get()
+	rdbConnector := infrastructure.NewRDBConnector(config)
+	handler := router.NewRouter(rdbConnector)
 	httpServer := server.NewServer(handler, config)
 	return httpServer
 }
