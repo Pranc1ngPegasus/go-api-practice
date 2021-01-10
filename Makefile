@@ -36,7 +36,7 @@ sqlboiler:
 	docker-compose $(COMPOSE_OPTS) exec -T app sh -c "./third_party/bin/sqlboiler --wipe mysql"
 
 migrate-up:
-	docker-compose $(COMPOSE_OPTS) exec -T app sh -c "./third_party/bin/sql-migrate up -config=dbconfig.yml"
+	docker-compose $(COMPOSE_OPTS) exec -T app sh -c "./third_party/bin/sql-migrate up -env=${ENV} -config=dbconfig.yml"
 
 migrate-down:
-	docker-compose $(COMPOSE_OPTS) exec -T app sh -c "./third_party/bin/sql-migrate down -config=dbconfig.yml"
+	docker-compose $(COMPOSE_OPTS) exec -T app sh -c "./third_party/bin/sql-migrate down -env=${ENV} -config=dbconfig.yml"
