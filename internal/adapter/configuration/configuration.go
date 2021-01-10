@@ -8,7 +8,7 @@ import (
 
 type (
 	Config struct {
-		ListenPort int `envconfig:"PORT" default:"3000"`
+		ListenPort int `envconfig:"APP_PORT" default:"3000"`
 	}
 )
 
