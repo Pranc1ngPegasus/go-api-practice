@@ -8,7 +8,12 @@ import (
 
 type (
 	Config struct {
-		ListenPort int `envconfig:"APP_PORT" default:"3000"`
+		ListenPort   int    `envconfig:"APP_PORT" default:"3000"`
+		DatabaseUser string `envconfig:"DB_USER"`
+		DatabasePass string `envconfig:"DB_PASS"`
+		DatabaseHost string `envconfig:"DB_HOST"`
+		DatabasePort int    `envconfig:"DB_PORT"`
+		DatabaseName string `envconfig:"DB_NAME"`
 	}
 )
 
