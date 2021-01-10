@@ -15,7 +15,7 @@ services:
     environment:
       ENV: ${ENV}
       PORT: ${PORT}
-      DB_NAME: ${MYSQL_DATABASE}
+      DB_NAME: ${MYSQL_DATABASE}_${ENV}
       DB_USER: ${MYSQL_USER}
       DB_PASS: ${MYSQL_PASSWORD}
       DB_HOST: ${MYSQL_HOST}
@@ -30,7 +30,7 @@ services:
   db:
     image: mysql:5.7
     environment:
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}_${ENV}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}

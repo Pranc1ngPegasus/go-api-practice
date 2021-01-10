@@ -1,5 +1,6 @@
 pkgname: model
 output: internal/adapter/infrastructure/model
+no-tests: 'true'
 add-global-variants: 'true'
 add-panic-variants: 'true'
 mysql:
@@ -9,6 +10,5 @@ mysql:
   user: ${DB_USER}
   pass: ${DB_PASS}
   sslmode: 'false'
-  skipSQLCmd: 'true'
   blacklist:
     - gorp_migrations

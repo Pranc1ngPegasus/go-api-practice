@@ -1,4 +1,5 @@
 /docker/db
 /.env
 /dbconfig.yml
+/sqlboiler.yml
 /tmp
