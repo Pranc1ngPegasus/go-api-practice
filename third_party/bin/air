@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+export PATH=$(pwd)/third_party/bin:$PATH
+
+go run github.com/cosmtrek/air "$@"
