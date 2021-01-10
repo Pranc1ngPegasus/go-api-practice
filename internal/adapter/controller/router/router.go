@@ -19,7 +19,7 @@ func NewRouter(connector infrastructure.RDBConnector) http.Handler {
 	router.Use(middleware.Timeout(60 * time.Second))
 
 	router.Mount("/healthcheck", NewHealthcheck())
-	router.Mount("/users", NewUser())
+	router.Mount("/users", NewUser(connector))
 
 	return router
 }
