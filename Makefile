@@ -9,6 +9,11 @@ wiregen:
 go-build: wiregen
 	GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./.artifacts/server-linux-amd64 ./cmd/server
 
+test:
+	go fmt ./...
+	go vet ./...
+	go test ./...
+
 build: wiregen
 	docker-compose $(COMPOSE_OPTS) up -d --build
 
