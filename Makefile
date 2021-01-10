@@ -32,6 +32,9 @@ stop:
 logs:
 	docker-compose $(COMPOSE_OPTS) logs -f
 
+sqlboiler:
+	docker-compose $(COMPOSE_OPTS) exec -T app sh -c "./third_party/bin/sqlboiler --wipe mysql"
+
 migrate-up:
 	docker-compose $(COMPOSE_OPTS) exec -T app sh -c "./third_party/bin/sql-migrate up -config=dbconfig.yml"
 

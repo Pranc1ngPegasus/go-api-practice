@@ -6,7 +6,11 @@ services:
       dockerfile: "docker/Dockerfile"
       args:
         PORT: ${PORT}
-    command: sh -c "envsubst < ./dbconfig.yml.tpl > ./dbconfig.yml && ./third_party/bin/air -c air.toml"
+    command: >
+      sh -c "
+      envsubst < ./dbconfig.yml.tpl > ./dbconfig.yml &&
+      envsubst < ./sqlboiler.yml.tpl > ./sqlboiler.yml &&
+      ./third_party/bin/air -c air.toml"
     container_name: go-api-practice-app
     environment:
       ENV: ${ENV}
