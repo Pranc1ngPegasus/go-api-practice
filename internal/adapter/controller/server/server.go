@@ -13,7 +13,7 @@ func NewServer(handler http.Handler, config configuration.Config) *http.Server {
 	log.Printf("Listen at :%d", port)
 
 	server := &http.Server{
-		Addr: fmt.Sprintf(":%d", port),
+		Addr:    fmt.Sprintf(":%d", port),
 		Handler: handler,
 	}
 

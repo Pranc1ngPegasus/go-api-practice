@@ -1,4 +1,4 @@
-.PHONY: wiregen go-build build up down start restart stop logs migrate-up migrate-down
+.PHONY: wiregen go-build format lint test build setup up down start restart stop logs migrate-up migrate-down prepare-test migrate-test-db
 
 BASE_DOCKER_COMPOSE = ./docker/docker-compose.yml
 COMPOSE_OPTS = -f "$(BASE_DOCKER_COMPOSE)" -p go-api-practice
@@ -8,6 +8,15 @@ wiregen:
 
 go-build: wiregen
 	GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./.artifacts/server-linux-amd64 ./cmd/server
+
+format:
+	go fmt ./...
+
+lint:
+	go vet ./...
+
+test: wiregen
+	go test ./...
 
 build: wiregen
 	docker-compose $(COMPOSE_OPTS) up -d --build
