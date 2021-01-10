@@ -3,13 +3,12 @@ output: internal/adapter/infrastructure/model
 add-global-variants: 'true'
 add-panic-variants: 'true'
 mysql:
-  dbname: practice
-  host: go-api-practice-db
+  dbname: ${DB_NAME}
+  host: ${DB_HOST}
   port: 3306
-  user: pranc1ngpegasus
-  pass: lqsym
+  user: ${DB_USER}
+  pass: ${DB_PASS}
   sslmode: 'false'
-  skipSQLCmd: 'false'
-  testdbname: practice_test
+  skipSQLCmd: 'true'
   blacklist:
     - gorp_migrations
