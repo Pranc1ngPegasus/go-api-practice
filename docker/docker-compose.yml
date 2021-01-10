@@ -14,11 +14,12 @@ services:
     container_name: go-api-practice-app
     environment:
       ENV: ${ENV}
-      APP_PORT: ${PORT}
+      APP_PORT: ${APP_PORT}
       DB_NAME: ${MYSQL_DATABASE}_${ENV}
       DB_USER: ${MYSQL_USER}
       DB_PASS: ${MYSQL_PASSWORD}
       DB_HOST: ${MYSQL_HOST}
+      DB_PORT: ${MYSQL_PORT}
     expose:
       - ${APP_PORT}
     links:
@@ -35,7 +36,7 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
-      - 3306:3306
+      - ${MYSQL_PORT}:3306
     command: |
       mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
     volumes:
