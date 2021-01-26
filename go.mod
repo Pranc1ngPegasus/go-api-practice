@@ -11,7 +11,7 @@ require (
 	github.com/go-chi/render v1.0.1
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/gofrs/uuid v4.0.0+incompatible // indirect
-	github.com/google/wire v0.4.0
+	github.com/google/wire v0.5.0
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/philhofer/fwd v1.1.1 // indirect
 	github.com/rubenv/sql-migrate v0.0.0-20200616145509-8d140a17f351
