@@ -15,7 +15,7 @@ require (
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/philhofer/fwd v1.1.1 // indirect
 	github.com/rubenv/sql-migrate v0.0.0-20200616145509-8d140a17f351
-	github.com/sirupsen/logrus v1.7.0
+	github.com/sirupsen/logrus v1.7.1
 	github.com/spf13/viper v1.7.1 // indirect
 	github.com/volatiletech/inflect v0.0.1 // indirect
 	github.com/volatiletech/null v8.0.0+incompatible
