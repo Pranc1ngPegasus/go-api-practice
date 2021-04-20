@@ -9,7 +9,7 @@ require (
 	github.com/friendsofgo/errors v0.9.2
 	github.com/go-chi/chi v1.5.4
 	github.com/go-chi/render v1.0.1
-	github.com/go-sql-driver/mysql v1.4.1
+	github.com/go-sql-driver/mysql v1.6.0
 	github.com/gofrs/uuid v4.0.0+incompatible // indirect
 	github.com/google/wire v0.5.0
 	github.com/kelseyhightower/envconfig v1.4.0
