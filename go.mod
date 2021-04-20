@@ -4,7 +4,7 @@ go 1.15
 
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.0 // indirect
-	github.com/DataDog/datadog-go v4.2.0+incompatible // indirect
+	github.com/Microsoft/go-winio v0.4.18 // indirect
 	github.com/cosmtrek/air v1.15.1
 	github.com/friendsofgo/errors v0.9.2
 	github.com/go-chi/chi v1.5.4
@@ -20,6 +20,5 @@ require (
 	github.com/volatiletech/inflect v0.0.1 // indirect
 	github.com/volatiletech/null v8.0.0+incompatible
 	github.com/volatiletech/sqlboiler v3.7.1+incompatible
-	golang.org/x/sys v0.0.0-20210110051926-789bb1bd4061 // indirect
-	gopkg.in/DataDog/dd-trace-go.v1 v1.28.0
+	gopkg.in/DataDog/dd-trace-go.v1 v1.29.2
 )
