@@ -20,5 +20,5 @@ require (
 	github.com/volatiletech/inflect v0.0.1 // indirect
 	github.com/volatiletech/null v8.0.0+incompatible
 	github.com/volatiletech/sqlboiler v3.7.1+incompatible
-	gopkg.in/DataDog/dd-trace-go.v1 v1.29.2
+	gopkg.in/DataDog/dd-trace-go.v1 v1.31.0
 )
