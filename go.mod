@@ -5,7 +5,7 @@ go 1.15
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.0 // indirect
 	github.com/Microsoft/go-winio v0.4.18 // indirect
-	github.com/cosmtrek/air v1.26.0
+	github.com/cosmtrek/air v1.27.2
 	github.com/friendsofgo/errors v0.9.2
 	github.com/go-chi/chi v1.5.4
 	github.com/go-chi/render v1.0.1
